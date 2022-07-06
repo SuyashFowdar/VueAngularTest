@@ -1,0 +1,11 @@
+<div class="m-3">
+    <ul class="list-group">
+        <li ng-repeat="todo in vm.todos" class="list-group-item">
+            <item1 todo="todo" index="$index"></item1>
+        </li>
+    </ul>
+    <form ng-submit="vm.submit()" class="m-3 d-flex justify-content-center flex-fill">
+        <input type="text" ng-model="vm.newTodo" placeholder="New To-Do Name" class="m-1">
+        <button type="submit" class="btn btn-primary m-1">{{vm.selectedIndex === null ? 'Add' : 'Update'}} To-Do</button>
+    </form>
+</div>

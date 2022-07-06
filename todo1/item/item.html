@@ -1,0 +1,7 @@
+<div id="{{'item' + vm.index}}">
+    <div class="d-flex justify-content-center align-items-center" ng-non-bindable>
+        <span>{{ todo }}</span>
+        <button @click="toggleEdit()" type="button" class="btn btn-light m-1">Edit</button>
+        <button @click="deleteItem" type="button" class="btn btn-light m-1">Delete</button>
+    </div>
+</div>

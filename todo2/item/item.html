@@ -1,0 +1,5 @@
+<div class="d-flex justify-content-center align-items-center">
+   <span>{{ todo }}</span>
+   <button @click="$emit('toggleedit')" type="button" class="btn btn-light m-1">Edit</button>
+   <button @click="$emit('deleteitem')" type="button" class="btn btn-light m-1">Delete</button>
+</div>

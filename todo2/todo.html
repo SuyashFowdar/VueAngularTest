@@ -1,0 +1,11 @@
+<div class="m-3" id="todo" ng-non-bindable>
+    <ul class="list-group">
+        <li v-for="(todo, todoIndex) in todos" :key="todoIndex" class="list-group-item">
+            <item2 :todo="todo" @deleteitem="deleteItem(todoIndex)" @toggleedit="toggleEdit(todoIndex)"></item2>
+        </li>
+    </ul>
+    <form @submit="submit" class="m-3 d-flex justify-content-center flex-fill">
+        <input type="text" v-model="newTodo" placeholder="New To-Do Name" class="m-1">
+        <button type="submit" class="btn btn-primary m-1">{{ selectedIndex === null ? 'Add' : 'Update' }} To-Do</button>
+    </form>
+</div>
